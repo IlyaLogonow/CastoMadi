@@ -1,0 +1,206 @@
+$semi-black: #212A2F
+$white: #FFFFFF
+
+%transition
+    transition: all 0.8s ease 0s
+
+*, *:after, *:before 
+    margin: 0
+    padding: 0
+    box-sizing: inherit
+
+body 
+    font-family: 'Roboto', sans-serif
+
+html 
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+
+.visibility-hidden 
+    display: none
+
+a 
+    text-decoration: none
+
+.btn-reset 
+    padding: 0
+    border: none
+    background-color: transparent
+    cursor: pointer
+
+
+input[type="text"] 
+    font-family: inherit /* 1 */
+    font-size: inherit /* 1 */
+    line-height: inherit /* 1 */
+    margin: 0 /* 2 */
+
+ul
+    list-style-type: none
+
+.wrapper 
+    position: relative
+    overflow: hidden
+
+
+.container 
+    max-width: 1360px
+    padding: 0 15px
+    margin: 0px auto
+    position: relative
+
+/*HEADER*/
+.header
+    min-height: 60px
+    display: flex
+    justify-content: space-between
+    align-items: center 
+
+.main-nav
+    &__list
+        display: flex
+        margin-left: -45px
+    &__item:not(:last-child)
+        margin-right: 29px
+        
+.header-link
+    @extend %transition
+
+.header-link a
+    position: relative
+    font-weight: 400
+    font-size: 12px
+    line-height: 21px
+    letter-spacing: 1.7px
+    text-transform: uppercase
+    color: $semi-black
+
+    cursor: pointer
+    line-height: 1
+    text-decoration: none
+
+.header-link a:after
+        display: block
+        position: absolute
+        left: 0
+        right: 0
+        width: 0
+        height: 2px
+        background-color: $semi-black
+        content: ""
+        transition: width 0.3s ease-out
+.header-link a:hover:after,
+    .header-link a:active:after,
+        .header-link a:focus:after
+            width: 100%
+
+.logo img
+    cursor: pointer
+
+.user-nav 
+    display: flex
+    margin-right: 31px
+    &__list:not(:last-child)
+        margin-right: 63px
+    &__log
+        position: relative
+    &__log:before
+        display: block
+        position: absolute
+        left: 55px
+        right: 0
+        width: 19.06px
+        height: 23.72px
+        content: url(../svg/icon/user-login.svg)
+    &__stores
+        position: relative
+    &__stores:before
+        display: block
+        position: absolute
+        left: 65px
+        right: 0px
+        width: 25px
+        height: 25px
+        content: url(../svg/icon/user-stores.svg)
+
+//CONTENT//
+.hero
+    min-height: 740px
+    background: url("../img/bg/bg-1.png") no-repeat
+    background-position: top  
+    background-size: cover
+    background-repeat: no-repeat
+    animation: anim 35s   infinite
+
+    @keyframes anim 
+        0% 
+            background: url("../img/bg/bg-1.png") no-repeat
+            background-position: top  
+            background-size: cover
+            background-repeat: no-repeat
+        20%
+            background: url("../img/bg/bg-2.png") no-repeat
+            background-position: top  
+            background-size: cover
+            background-repeat: no-repeat
+        40%
+            background: url("../img/bg/bg-3.png") no-repeat
+            background-position: top  
+            background-size: cover
+            background-repeat: no-repeat 
+        60% 
+            background: url("../img/bg/bg-1.png") no-repeat
+            background-position: top  
+            background-size: cover
+            background-repeat: no-repeat
+        80% 
+            background: url("../img/bg/bg-2.png") no-repeat
+            background-position: top  
+            background-size: cover
+            background-repeat: no-repeat
+        100%
+            background: url("../img/bg/bg-3.png") no-repeat
+            background-position: top  
+            background-size: cover
+            background-repeat: no-repeat
+
+.hero-text
+    &__slogan
+        font-size: 48px
+        line-height: 63px
+        letter-spacing: 0.5px
+        color: $white
+        padding-top: 495px
+        margin-bottom: 11px
+        color: $white
+    &__title
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.5px
+        color: $white
+        margin-bottom: 26px
+    &__link
+        font-weight: 700
+        font-size: 14px
+        line-height: 16px
+        text-align: center
+        letter-spacing: 2px
+        text-transform: uppercase
+        color: $semi-black
+        background: $white
+        border-radius: 2px
+        @extend %transition
+    &__link:hover,
+        &__link:active,
+            &__link:focus
+                background: $semi-black
+                border-radius: 30px
+                color: $white
+    &__link:not(:last-child)
+        margin-right: 24px
+    &__link-order
+        padding: 16px 64px
+    &__link-custom
+        padding: 16px 23px
+
