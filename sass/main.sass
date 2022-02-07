@@ -4,6 +4,83 @@ $white: #FFFFFF
 %transition
     transition: all 0.8s ease 0s
 
+%custom-clothing-bg-link
+    font-weight: bold
+    font-size: 14px
+    line-height: 16px
+    text-align: center
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: $semi-black
+    background: #FFFFFF
+    border-radius: 2px
+
+//info-block//
+%title-info-block
+    font-weight: bold
+    font-size: 32px
+    line-height: 42px
+    text-align: center
+    letter-spacing: 0.5px
+    color: $semi-black
+
+%subtitle-info-block
+    font-size: 16px
+    line-height: 24px
+    text-align: center
+    letter-spacing: 0.5px
+    color: $semi-black
+
+%link-info-block
+    font-weight: bold
+    font-size: 14px
+    line-height: 16px
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: $white
+
+    background: $semi-black
+    border: 2px solid $semi-black
+    box-sizing: border-box
+    border-radius: 2px
+//info-block//
+
+//link-hove//
+%link-hover-semi-black
+    background: $semi-black
+    border-radius: 30px
+    color: $white
+//link-hove//
+
+//link-hove//
+%link-hover-white
+    background: $white
+    border-radius: 30px
+    color: $semi-black
+//link-hove//
+
+//slider//
+%slider-title
+    font-weight: bold
+    font-size: 32px
+    line-height: 42px
+    letter-spacing: 0.5px
+    color: $semi-black
+
+%slider-subtitle
+    font-weight: bold
+    font-size: 22px
+    line-height: 29px
+    letter-spacing: 0.5px
+    color: $semi-black
+
+%slider-text
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.5px
+    color: $semi-black
+//slider//
+
 *, *:after, *:before 
     margin: 0
     padding: 0
@@ -125,13 +202,15 @@ ul
         content: url(../svg/icon/user-stores.svg)
 
 //CONTENT//
+//hero//
+//hero bg//
 .hero
     min-height: 740px
     background: url("../img/bg/bg-1.png") no-repeat
     background-position: top  
     background-size: cover
     background-repeat: no-repeat
-    animation: anim 35s   infinite
+    animation: anim 35s infinite
 
     @keyframes anim 
         0% 
@@ -164,6 +243,7 @@ ul
             background-position: top  
             background-size: cover
             background-repeat: no-repeat
+//hero bg//
 
 .hero-text
     &__slogan
@@ -194,13 +274,181 @@ ul
     &__link:hover,
         &__link:active,
             &__link:focus
-                background: $semi-black
-                border-radius: 30px
-                color: $white
+                @extend %link-hover-semi-black
     &__link:not(:last-child)
         margin-right: 24px
     &__link-order
         padding: 16px 64px
     &__link-custom
         padding: 16px 23px
+//hero//
 
+//custom-clothing//
+.custom-clothing 
+    min-height: 897px
+    &__title
+        font-size: 32px
+        line-height: 42px
+        text-align: center
+        letter-spacing: 0.5px
+        color: $semi-black
+        padding-top: 86px
+        padding-bottom: 26px
+        margin-bottom: 62px
+        border-bottom: 1px solid #D3D4D5
+    &__row
+        display: flex
+        justify-content: space-between
+
+.custom-clothing-bg
+    width: 396px
+    height: 396px
+    margin-bottom: 17px
+    display: flex
+    align-items: center
+    justify-content: center
+    &__link
+        @extend  %transition
+        @extend %custom-clothing-bg-link
+        z-index: 1
+    &__link:hover,
+        &__link:active,
+            &__link:focus
+            @extend %link-hover-semi-black
+.link-jackets
+    padding: 15px 94px
+.link-outerwear
+    padding: 15px 88px
+.link-shoppers
+    padding: 15px 94px
+
+.custom-clothing-jackets
+    background: url("../img/custom-clothing-bg/kurtis.png") no-repeat
+    background-position: top  
+    background-size: cover
+    background-repeat: no-repeat
+.custom-clothing-outerwear
+    background: url("../img/custom-clothing-bg/outerwear.png") no-repeat
+    background-position: top  
+    background-size: cover
+    background-repeat: no-repeat
+.custom-clothing-shoppers
+    background: url("../img/custom-clothing-bg/shoppers.png") no-repeat
+    background-position: top  
+    background-size: cover
+    background-repeat: no-repeat
+
+.custom-clothing-text
+    margin-left: 30px
+    &__title
+        padding-bottom: 10px
+        border-bottom: 1px solid #D3D4D5
+        margin-bottom: 17px
+    &__text
+        font-size: 14px
+        line-height: 20px
+        letter-spacing: 0.4px
+        color: $semi-black
+        position: relative
+        padding-left: 42px
+        margin-bottom: 50px
+    &__text::before
+        content: url("../svg/icon/jackets-of-any-size.svg")
+        display: block
+        position: absolute
+        left: 0px
+        top: -2px
+        right: 0px
+        width: 30px
+        height: 30px
+
+//babackground-photo-one//
+.babackground-photo-one
+    height: 542px
+    background: url("../img/babackground-photo/babackground-photo-one.png") no-repeat
+    background-position: top  
+    background-size: cover
+    background-repeat: no-repeat
+
+//order//
+.order
+    min-height: 360px
+    &__title
+        @extend %title-info-block
+        padding-top: 68px
+        margin-bottom: 26px
+    &__subtitle
+        @extend %subtitle-info-block
+        margin-bottom: 51px
+    &__link
+        text-align: center
+    &__link a
+        @extend %link-info-block
+        padding: 17px 154px
+        @extend %transition
+    &__link a:hover,
+        &__link:active,
+            &__link:focus
+                @extend %link-hover-white
+
+//jackets//
+//slider//
+.jackets
+    min-height: 733px
+    &__title
+        @extend %slider-title
+        margin-bottom: 24px
+
+.slider
+    &__img
+        width: 396px
+        height: 396px
+        margin-bottom: 17px
+    &__subtitle
+        @extend %slider-subtitle
+        margin-bottom: 10px
+        margin-left: 18px
+    &__text
+        @extend %slider-text
+        margin-left: 18px
+
+//babackground-photo-two//
+.babackground-photo-two
+    height: 542px
+    background: url("../img/babackground-photo/babackground-photo-two.png") no-repeat
+    background-position: top  
+    background-size: cover
+    background-repeat: no-repeat
+
+//questions-answers//
+.questions-answers
+    min-height: 350px
+    &__title
+        @extend %title-info-block
+        padding-top: 47px
+        margin-bottom: 41px
+    &__text
+        @extend %subtitle-info-block
+        font-weight: 700
+        margin: 0 auto
+        margin-bottom: 55px
+        max-width: 471px
+    &__link
+        text-align: center
+        margin-bottom: 100px
+    &__link a
+        @extend %link-info-block
+        padding: 16px 20px
+        @extend %transition
+    &__link a:hover,
+        &__link:active,
+            &__link:focus
+                @extend %link-hover-white
+
+//babackground-photo-three//
+.babackground-photo-three
+    height: 542px
+    background: url("../gif/babackground-photo-three.gif")
+    background-position: top  
+    background-size: cover
+    background-repeat: no-repeat

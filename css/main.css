@@ -1,6 +1,84 @@
-.hero-text__link, .header-link {
+.questions-answers__link a, .order__link a, .custom-clothing-bg__link, .hero-text__link, .header-link {
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
+}
+
+.custom-clothing-bg__link {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #212A2F;
+  background: #FFFFFF;
+  border-radius: 2px;
+}
+
+.questions-answers__title, .order__title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #212A2F;
+}
+
+.questions-answers__text, .order__subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #212A2F;
+}
+
+.questions-answers__link a, .order__link a {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #212A2F;
+  border: 2px solid #212A2F;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.custom-clothing-bg__link:hover, .custom-clothing-bg__link:active, .custom-clothing-bg__link:focus, .hero-text__link:hover, .hero-text__link:active, .hero-text__link:focus {
+  background: #212A2F;
+  border-radius: 30px;
+  color: #FFFFFF;
+}
+
+.questions-answers__link a:hover, .questions-answers__link:active, .questions-answers__link:focus, .order__link a:hover, .order__link:active, .order__link:focus {
+  background: #FFFFFF;
+  border-radius: 30px;
+  color: #212A2F;
+}
+
+.jackets__title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0.5px;
+  color: #212A2F;
+}
+
+.slider__subtitle {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+  color: #212A2F;
+}
+
+.slider__text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #212A2F;
 }
 
 *, *:after, *:before {
@@ -265,11 +343,6 @@ ul {
   background: #FFFFFF;
   border-radius: 2px;
 }
-.hero-text__link:hover, .hero-text__link:active, .hero-text__link:focus {
-  background: #212A2F;
-  border-radius: 30px;
-  color: #FFFFFF;
-}
 .hero-text__link:not(:last-child) {
   margin-right: 24px;
 }
@@ -278,4 +351,185 @@ ul {
 }
 .hero-text__link-custom {
   padding: 16px 23px;
+}
+
+.custom-clothing {
+  min-height: 897px;
+}
+.custom-clothing__title {
+  font-size: 32px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #212A2F;
+  padding-top: 86px;
+  padding-bottom: 26px;
+  margin-bottom: 62px;
+  border-bottom: 1px solid #D3D4D5;
+}
+.custom-clothing__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.custom-clothing-bg {
+  width: 396px;
+  height: 396px;
+  margin-bottom: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.custom-clothing-bg__link {
+  z-index: 1;
+}
+.link-jackets {
+  padding: 15px 94px;
+}
+
+.link-outerwear {
+  padding: 15px 88px;
+}
+
+.link-shoppers {
+  padding: 15px 94px;
+}
+
+.custom-clothing-jackets {
+  background: url("../img/custom-clothing-bg/kurtis.png") no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.custom-clothing-outerwear {
+  background: url("../img/custom-clothing-bg/outerwear.png") no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.custom-clothing-shoppers {
+  background: url("../img/custom-clothing-bg/shoppers.png") no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.custom-clothing-text {
+  margin-left: 30px;
+}
+.custom-clothing-text__title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D3D4D5;
+  margin-bottom: 17px;
+}
+.custom-clothing-text__text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  color: #212A2F;
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 50px;
+}
+.custom-clothing-text__text::before {
+  content: url("../svg/icon/jackets-of-any-size.svg");
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+}
+
+.babackground-photo-one {
+  height: 542px;
+  background: url("../img/babackground-photo/babackground-photo-one.png") no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.order {
+  min-height: 360px;
+}
+.order__title {
+  padding-top: 68px;
+  margin-bottom: 26px;
+}
+.order__subtitle {
+  margin-bottom: 51px;
+}
+.order__link {
+  text-align: center;
+}
+.order__link a {
+  padding: 17px 154px;
+}
+.jackets {
+  min-height: 733px;
+}
+.jackets__title {
+  margin-bottom: 24px;
+}
+
+.slider__img {
+  width: 396px;
+  height: 396px;
+  margin-bottom: 17px;
+}
+.slider__subtitle {
+  margin-bottom: 10px;
+  margin-left: 18px;
+}
+.slider__text {
+  margin-left: 18px;
+}
+
+.babackground-photo-two {
+  height: 542px;
+  background: url("../img/babackground-photo/babackground-photo-two.png") no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.questions-answers {
+  min-height: 350px;
+}
+.questions-answers__title {
+  padding-top: 47px;
+  margin-bottom: 41px;
+}
+.questions-answers__text {
+  font-weight: 700;
+  margin: 0 auto;
+  margin-bottom: 55px;
+  max-width: 471px;
+}
+.questions-answers__link {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.questions-answers__link a {
+  padding: 16px 20px;
+}
+.babackground-photo-three {
+  height: 542px;
+  background: url("../gif/babackground-photo-three.gif");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
