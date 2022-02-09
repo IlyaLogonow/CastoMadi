@@ -1,5 +1,6 @@
 $semi-black: #212A2F
 $white: #FFFFFF
+$grey: #74797C
 
 %transition
     transition: all 0.8s ease 0s
@@ -448,7 +449,113 @@ ul
 //babackground-photo-three//
 .babackground-photo-three
     height: 542px
-    background: url("../gif/babackground-photo-three.gif")
+    background: url("../img/babackground-photo/babackground-photo-three.png")
     background-position: top  
     background-size: cover
     background-repeat: no-repeat
+
+//shoppers//
+.shoppers 
+    min-height: 738px
+    &__title
+        margin-top: 111px
+        margin-bottom: 24px
+
+//promotions//
+.promotions
+    min-height: 433px
+    &__title
+        %title-info-block
+        margin-top: 48px
+        margin-bottom: 35px
+        text-align: center
+    &__subtitle
+        %subtitle-info-block
+        margin-bottom: 74px
+        text-align: center
+    &__form
+        text-align: center
+        margin-bottom: 24px
+    &__input 
+        font-size: 14px
+        line-height: 14px
+        color: $white
+        padding: 21px 362px 15px 60px
+        border: none
+        border-bottom: solid 2px $semi-black
+        @extend %transition
+    &__input:hover,
+        &__input:active,
+            &__input:focus
+                border: solid 2px $semi-black
+                padding: 21px 462px 21px 30px
+                @extend %link-hover-white
+                box-shadow: 0px 0px 30px -9px rgba(34, 60, 80, 0.2)
+    &__submit
+        @extend %link-info-block
+        padding: 17px 20px
+        margin-left: 15px
+        cursor: pointer
+        @extend %transition
+    &__submit:hover,
+        &__submit:active,
+            &__submit:focus
+                @extend %link-hover-white
+    &__text
+        font-size: 14px
+        line-height: 14px
+        text-align: center
+        color: $grey
+        margin-bottom: 126px
+
+//FOOTER//
+.footer
+    min-height: 376px
+    background-color: $semi-black
+    &__row
+        display: flex
+        padding-top: 53px
+    &__title
+        font-size: 14px
+        line-height: 21px
+        letter-spacing: 2px
+        text-transform: uppercase
+        color: $white
+        margin-bottom: 21px
+    &__list:not(:last-child)
+        margin-right: 135px
+    &__item
+        margin-bottom: 15px
+        font-size: 12px
+        line-height: 12px
+        letter-spacing: 0.5px
+        color: $white
+    &__item a
+        position: relative
+        text-decoration: none
+        color: $white
+        @extend %transition
+        cursor: pointer
+        line-height: 2
+        text-decoration: none
+    &__item a:after
+            display: block
+            position: absolute
+            left: 0
+            right: 0
+            width: 0
+            height: 1px
+            background-color: $white
+            content: ""
+            transition: width 0.3s ease-out
+    &__item a:hover:after,
+        &__item a:active:after,
+            &__item a:focus:after
+                width: 100%
+    &__text
+        font-size: 12px
+        line-height: 18px
+        text-align: center
+        letter-spacing: 0.5px
+        color: $white
+        margin-top: 100px

@@ -13,13 +13,17 @@
     <link rel="stylesheet" href="libs/slick/slick-theme.css">
     <!--libs-->
 
+    <!--ASO-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--ASO-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header container">
-        <nav class="main-nav">
+        <nav class="main-nav" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             <ul class="main-nav__list">
                 <li class="main-nav__item header-link"><a href="#">Order</a></li>
                 <li class="main-nav__item header-link"><a href="#">About Me</a></li>
@@ -27,11 +31,12 @@
             </ul>
         </nav>
 
-        <div class="logo">
+        <div class="logo" data-aos="fade-up"
+        data-aos-duration="3000">
             <img src="svg/logo.svg" alt="Site logo CastoMadi">
         </div>
 
-        <ul class="user-nav"> 
+        <ul class="user-nav" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"> 
             <li class="user-nav__list user-nav__log header-link"><a href="#">Log in</a></li>
             <li class="user-nav__list user-nav__stores header-link"><a href="#">Stores</a></li>
         </ul>
@@ -42,7 +47,7 @@
         
         <div class="hero">
             <div class="container">
-                <section class="hero-text">
+                <section class="hero-text" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000">
                     <p class="hero-text__slogan">I will paint your fantasy</p>
                     <h2 class="hero-text__title">Order custom jackets, sweaters, shopper</h2>
                     <a class="hero-text__link hero-text__link-order" href="#">Order</a>
@@ -55,7 +60,7 @@
             <div class="container"> 
                 <h2 class="custom-clothing__title">custom clothing</h2>
                 <div class="custom-clothing__row">
-                    <div class="custom-clothing-cart">
+                    <div class="custom-clothing-cart" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
                         <div class="custom-clothing-bg custom-clothing-jackets">
                             <a class="custom-clothing-bg__link link-jackets" href="#">Jackets</a>
                         </div>
@@ -66,7 +71,7 @@
                         </div>
                     </div>
 
-                    <div class="custom-clothing-cart">
+                    <div class="custom-clothing-cart" data-aos="fade-up" data-aos-duration="2000">
                         <div class="custom-clothing-bg custom-clothing-outerwear">
                             <a class="custom-clothing-bg__link link-outerwear" href="#">Outerwear</a>
                         </div>
@@ -77,7 +82,7 @@
                         </div>
                     </div>
 
-                    <div class="custom-clothing-cart">
+                    <div class="custom-clothing-cart" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
                         <div class="custom-clothing-bg custom-clothing-shoppers">
                             <a class="custom-clothing-bg__link link-shoppers" href="#">Shoppers</a>
                         </div>
@@ -96,15 +101,15 @@
 
         <section class="order">
             <div class="container">
-                <h2 class="order__title">You can order a jacket with your own design</h2>
-                <p class="order__subtitle">Leave your applications with a description of your drawing</p>
-                <div class="order__link">
+                <h2 class="order__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">You can order a jacket with your own design</h2>
+                <p class="order__subtitle" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200">Leave your applications with a description of your drawing</p>
+                <div class="order__link" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300">
                     <a href="#">order</a>
                 </div>
             </div>
         </section>
 
-        <section class="jackets">
+        <section class="jackets" id="jackets" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             <div class="container">
                 <h2 class="jackets__title">Jackets</h2>
                 <div class="slider">
@@ -188,15 +193,15 @@
 
         <section class="questions-answers">
             <div class="container">
-                <h2 class="questions-answers__title">Questions and answers</h2>
-                <p class="questions-answers__text">During my long work, customers have many different questions. The most popular ones are already answered.</p>
-                <div class="questions-answers__link"> 
+                <h2 class="questions-answers__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">Questions and answers</h2>
+                <p class="questions-answers__text" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200">During my long work, customers have many different questions. The most popular ones are already answered.</p>
+                <div class="questions-answers__link" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300"> 
                     <a href="#">Go to answers</a>
                 </div>
             </div>
         </section>
 
-        <section class="outerwear">
+        <section class="outerwear" id="outerwear" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             <div class="container">
                 <h2 class="jackets__title">Outerwear</h2>
                 <div class="slider">
@@ -237,20 +242,93 @@
 
         <div class="babackground-photo-three">
         </div>
+
+        <section class="shoppers" id="shoppers" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+            <div class="container">
+                <h2 class="jackets__title shoppers__title">Shoppers</h2>
+                <div class="slider">
+                    <div class="slider__cart">
+                        <img class="slider__img" src="img/shopper/AirJordan.png" alt="Air Jordan">
+                        <div class="custom-clothing-text"> 
+                            <h3 class="custom-clothing-text__title">Shopper</h3>
+                            <p class="custom-clothing-text__text">Shopper</p>
+                        </div>
+                    </div>
+
+                    <div class="slider__cart">
+                        <img class="slider__img" src="img/shopper/AdventureTime.png" alt="Adventure Time">
+                        <div class="custom-clothing-text"> 
+                            <h3 class="custom-clothing-text__title">Shopper</h3>
+                            <p class="custom-clothing-text__text">Shopper</p>
+                        </div>
+                    </div>
+
+                    <div class="slider__cart">
+                        <img class="slider__img" src="img/shopper/AirJordan.png" alt="Air Jordan">
+                        <div class="custom-clothing-text"> 
+                            <h3 class="custom-clothing-text__title">Shopper</h3>
+                            <p class="custom-clothing-text__text">Shopper</p>
+                        </div>
+                    </div>
+
+                    <div class="slider__cart">
+                        <img class="slider__img" src="img/shopper/AdventureTime.png" alt="Adventure Time">
+                        <div class="custom-clothing-text"> 
+                            <h3 class="custom-clothing-text__title">Shopper</h3>
+                            <p class="custom-clothing-text__text">Shopper</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promotions">
+            <div class="container">
+                <h2 class="promotions__title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">Want to be the first to know about promotions?</h2>
+                <p class="promotions__subtitle" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200">Join our email list and be the first to know about new limited edition products.</p>
+                <form class="promotions__form" action="#" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300">
+                    <input class="promotions__input" type="text" name="email" placeholder="Enter Your Email Address">
+                    <button type="submit" class="promotions__submit" name="submitbtn" value="subm">Sign Up</button>
+                </form>
+                <p class="promotions__text" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300">Note: You can opt-out at any time. See our Privacy Policy and Terms</p>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-
+        <div class="container">
+            <div class="footer__row" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"> 
+                <ul class="footer__list"> 
+                    <li class="footer__title"><h3>Contacts</h3></li>
+                    <li class="footer__item"><a href="https://www.instagram.com/custommadi/">instagram</a></li>
+                    <li class="footer__item"><a href="https://vk.com/the_weird">vk</a></li>
+                    <li class="footer__item">madonka666@gmail.com</li>
+                </ul>
+                
+                <ul class="footer__list"> 
+                    <li class="footer__title"><h3>Shop</h3></li>
+                    <li class="footer__item"><a href="#jackets">Jackets</a></li>
+                    <li class="footer__item"><a href="#outerwear">Outerwear</a></li>
+                    <li class="footer__item"><a href="#shoppers">shoppers</a></li>
+                </ul>
+            </div>
+            
+            <p class="footer__text" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="1000">© 2021 CastoMadi</p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js" integrity="sha256-o/z6kPkEdOiAuBTgTdUaFN/F+srDaF3EbsJbkeAboXk=" crossorigin="anonymous"></script>
+    <!--ASO-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--ASO-->
 
     <!--slick-->
     <script src="libs/jquery.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="js/slick.js"></script>
     <!--slick-->
-
     <script src="js/script.js"></script>
 </body>
 </html>
