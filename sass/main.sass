@@ -122,23 +122,35 @@ ul
     overflow: hidden
 
 
-.container 
+.container
     max-width: 1360px
     padding: 0 15px
     margin: 0px auto
     position: relative
 
 /*HEADER*/
+.menu__btn
+    display: none
+#menu__toggle 
+    display: none
+    opacity: 0
+
 .header
     min-height: 60px
     display: flex
     justify-content: space-between
     align-items: center 
+    @media (max-width: 1000px) 
+        flex-direction: column
+        align-items: end
+        margin-right: 10px
 
 .main-nav
     &__list
         display: flex
         margin-left: -45px
+    @media screen and ( max-width: 1435px )
+        margin-left: 45px
     &__item:not(:last-child)
         margin-right: 29px
         
@@ -175,12 +187,20 @@ ul
 
 .logo img
     cursor: pointer
+    @media (max-width: 1000px) 
+        margin-top: 60px
+        margin-bottom: 30px
 
 .user-nav 
     display: flex
     margin-right: 31px
+    @media screen and ( max-width: 1435px )
+        margin-left: 31px
+        margin-bottom: 20px
     &__list:not(:last-child)
         margin-right: 63px
+        @media (max-width: 1000px)
+            margin-right: 50px
     &__log
         position: relative
     &__log:before
@@ -202,51 +222,142 @@ ul
         height: 25px
         content: url(../svg/icon/user-stores.svg)
 
-//CONTENT//
-//hero//
-//hero bg//
+//burger//
+@media (max-width: 1000px) 
+    /* стилизуем кнопку */
+    .menu__btn 
+        display: flex /* используем flex для центрирования содержимого */
+        align-items: center /* центрируем содержимое кнопки */
+        position: absolute
+        top: 20px
+        left: 20px
+        width: 26px
+        height: 26px
+        cursor: pointer
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after 
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: #616161
+        z-index: 2
+
+    .menu__btn > span::before 
+        content: ''
+        top: -8px
+        
+    .menu__btn > span::after 
+        content: ''
+        top: 8px
+
+    /* контейнер меню */
+    .menu__box 
+        display: block
+        position: fixed
+        visibility: hidden
+        top: 0
+        left: -100%
+        width: 300px
+        height: 100%
+        margin: 0
+        padding: 80px 0
+        list-style: none
+        text-align: center
+        background-color: #F6F6F6
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+        z-index: 1
+
+    /* элементы меню */
+    .menu__item 
+        display: block
+        margin: 15px
+        color: #333
+        font-size: 20px
+        font-weight: 600
+        text-decoration: none
+
+    .menu__item:hover 
+        background-color: #F6F6F6
+
+    #menu__toggle:checked ~ .menu__btn > span 
+        transform: rotate(45deg)
+
+    #menu__toggle:checked ~ .menu__btn > span::before 
+        top: 0
+        transform: rotate(0)
+
+    #menu__toggle:checked ~ .menu__btn > span::after 
+        top: 0
+        transform: rotate(90deg)
+
+    #menu__toggle:checked ~ .menu__box 
+        visibility: visible
+        left: 0
+
+    .main-nav__list 
+        display: flex
+        flex-direction:column
+        margin-top: 0px
+        margin-right: 0px
+
+    .main-nav__item:not(:last-child) 
+        margin-right: 0px
+
+// //CONTENT//
+// //hero//
+// //hero bg//
 .hero
     min-height: 740px
-    background: url("../img/bg/bg-1.png") no-repeat
-    background-position: top  
+    background: url("../img/bg/bg-1.png")
+    background-position: top center 
     background-size: cover
     background-repeat: no-repeat
     animation: anim 35s infinite
-
+    @media screen and ( max-width: 1300px )
+        min-height: 740px
+        background: url("../img/mobile/bg/angel.png")
+        background-position: center 
+        background-size: cover
+        background-repeat: no-repeat
+        animation: anim-mobile 35s infinite
+    
     @keyframes anim 
         0% 
             background: url("../img/bg/bg-1.png") no-repeat
             background-position: top  
-            background-size: cover
+            background-size: contain
             background-repeat: no-repeat
         20%
             background: url("../img/bg/bg-2.png") no-repeat
             background-position: top  
-            background-size: cover
+            background-size: contain
             background-repeat: no-repeat
         40%
             background: url("../img/bg/bg-3.png") no-repeat
             background-position: top  
-            background-size: cover
+            background-size: contain
             background-repeat: no-repeat 
         60% 
             background: url("../img/bg/bg-1.png") no-repeat
             background-position: top  
-            background-size: cover
+            background-size: contain
             background-repeat: no-repeat
         80% 
             background: url("../img/bg/bg-2.png") no-repeat
             background-position: top  
-            background-size: cover
+            background-size: contain
             background-repeat: no-repeat
         100%
             background: url("../img/bg/bg-3.png") no-repeat
             background-position: top  
-            background-size: cover
+            background-size: contain
             background-repeat: no-repeat
 //hero bg//
 
-.hero-text
+.hero-text    
     &__slogan
         font-size: 48px
         line-height: 63px
@@ -255,6 +366,11 @@ ul
         padding-top: 495px
         margin-bottom: 11px
         color: $white
+        @media screen and ( max-width: 600px )
+            padding-top: 300px
+        @media screen and ( max-width: 540px )
+            font-size: 30px
+            
     &__title
         font-size: 16px
         line-height: 24px
@@ -272,12 +388,17 @@ ul
         background: $white
         border-radius: 2px
         @extend %transition
+        @media screen and ( max-width: 460px )
+            display: block
+            
     &__link:hover,
         &__link:active,
             &__link:focus
                 @extend %link-hover-semi-black
     &__link:not(:last-child)
         margin-right: 24px
+        @media screen and ( max-width: 460px )
+            margin-bottom: 30px
     &__link-order
         padding: 16px 64px
     &__link-custom
@@ -299,7 +420,10 @@ ul
         border-bottom: 1px solid #D3D4D5
     &__row
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
+        @media screen and ( max-width: 1300px )
+            justify-content: space-around
 
 .custom-clothing-bg
     width: 396px
@@ -308,6 +432,7 @@ ul
     display: flex
     align-items: center
     justify-content: center
+    margin-right: 20px
     &__link
         @extend  %transition
         @extend %custom-clothing-bg-link
@@ -362,6 +487,7 @@ ul
         right: 0px
         width: 30px
         height: 30px
+//custom-clothing//
 
 //babackground-photo-one//
 .babackground-photo-one
@@ -370,6 +496,8 @@ ul
     background-position: top  
     background-size: cover
     background-repeat: no-repeat
+    @media screen and ( max-width: 1000px )
+        height: 342px
 
 //order//
 .order
@@ -402,8 +530,8 @@ ul
 
 .slider
     &__img
-        width: 396px
-        height: 396px
+        max-width: 396px
+        min-height: 396px
         margin-bottom: 17px
     &__subtitle
         @extend %slider-subtitle
@@ -420,6 +548,8 @@ ul
     background-position: top  
     background-size: cover
     background-repeat: no-repeat
+    @media screen and ( max-width: 1000px )
+        height: 342px
 
 //questions-answers//
 .questions-answers
@@ -453,6 +583,8 @@ ul
     background-position: top  
     background-size: cover
     background-repeat: no-repeat
+    @media screen and ( max-width: 1000px )
+        height: 342px
 
 //shoppers//
 .shoppers 
@@ -484,6 +616,11 @@ ul
         border: none
         border-bottom: solid 2px $semi-black
         @extend %transition
+        @media screen and ( max-width: 770px )
+            padding: 21px 162px 15px 60px
+            @media screen and ( max-width: 420px )
+            padding: 21px 50px 15px 60px
+            
     &__input:hover,
         &__input:active,
             &__input:focus
@@ -491,12 +628,18 @@ ul
                 padding: 21px 462px 21px 30px
                 @extend %link-hover-white
                 box-shadow: 0px 0px 30px -9px rgba(34, 60, 80, 0.2)
+                @media screen and ( max-width: 770px )
+                padding: 21px 162px 15px 60px
+                @media screen and ( max-width: 420px )
+                padding: 21px 50px 15px 60px
     &__submit
         @extend %link-info-block
         padding: 17px 20px
         margin-left: 15px
         cursor: pointer
         @extend %transition
+        @media screen and ( max-width: 770px )
+            margin-top: 30px
     &__submit:hover,
         &__submit:active,
             &__submit:focus

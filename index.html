@@ -23,16 +23,20 @@
 </head>
 <body>
     <header class="header container">
-        <nav class="main-nav" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+        <input id="menu__toggle" type="checkbox">
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+
+        <nav class="main-nav menu__box" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             <ul class="main-nav__list">
-                <li class="main-nav__item header-link"><a href="#">Order</a></li>
-                <li class="main-nav__item header-link"><a href="#">About Me</a></li>
-                <li class="main-nav__item header-link"><a href="#">Questions</a></li>
+                <li class="main-nav__item header-link menu__item"><a href="#">Order</a></li>
+                <li class="main-nav__item header-link menu__item"><a href="#">About Me</a></li>
+                <li class="main-nav__item header-link menu__item"><a href="#">Questions</a></li>
             </ul>
         </nav>
 
-        <div class="logo" data-aos="fade-up"
-        data-aos-duration="3000">
+        <div class="logo" data-aos="fade-up" data-aos-duration="3000">
             <img src="svg/logo.svg" alt="Site logo CastoMadi">
         </div>
 
@@ -47,7 +51,7 @@
         
         <div class="hero">
             <div class="container">
-                <section class="hero-text" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000">
+                <section class="hero-text hide-text" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000">
                     <p class="hero-text__slogan">I will paint your fantasy</p>
                     <h2 class="hero-text__title">Order custom jackets, sweaters, shopper</h2>
                     <a class="hero-text__link hero-text__link-order" href="#">Order</a>
@@ -57,7 +61,7 @@
         </div>
 
         <section class="custom-clothing">
-            <div class="container"> 
+            <div class="container">
                 <h2 class="custom-clothing__title">custom clothing</h2>
                 <div class="custom-clothing__row">
                     <div class="custom-clothing-cart" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
@@ -71,7 +75,7 @@
                         </div>
                     </div>
 
-                    <div class="custom-clothing-cart" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="custom-clothing-cart" data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
                         <div class="custom-clothing-bg custom-clothing-outerwear">
                             <a class="custom-clothing-bg__link link-outerwear" href="#">Outerwear</a>
                         </div>
@@ -82,7 +86,7 @@
                         </div>
                     </div>
 
-                    <div class="custom-clothing-cart" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                    <div class="custom-clothing-cart" data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
                         <div class="custom-clothing-bg custom-clothing-shoppers">
                             <a class="custom-clothing-bg__link link-shoppers" href="#">Shoppers</a>
                         </div>
@@ -94,10 +98,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <div class="babackground-photo-one">
-        </div>
+        </div> 
 
         <section class="order">
             <div class="container">
@@ -107,7 +111,7 @@
                     <a href="#">order</a>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <section class="jackets" id="jackets" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             <div class="container">
@@ -186,10 +190,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <div class="babackground-photo-two">
-        </div>
+        </div> 
 
         <section class="questions-answers">
             <div class="container">
@@ -199,7 +203,7 @@
                     <a href="#">Go to answers</a>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <section class="outerwear" id="outerwear" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             <div class="container">
@@ -238,10 +242,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <div class="babackground-photo-three">
-        </div>
+        </div> 
 
         <section class="shoppers" id="shoppers" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
             <div class="container">
@@ -280,7 +284,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <section class="promotions">
             <div class="container">
@@ -292,7 +296,7 @@
                 </form>
                 <p class="promotions__text" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300">Note: You can opt-out at any time. See our Privacy Policy and Terms</p>
             </div>
-        </section>
+        </section> 
     </main>
 
     <footer class="footer">
@@ -315,7 +319,7 @@
             
             <p class="footer__text" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="1000">© 2021 CastoMadi</p>
         </div>
-    </footer>
+    </footer>  -->
 
     <!--ASO-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
