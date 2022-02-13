@@ -4,6 +4,7 @@ $('.slider').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1240,
@@ -17,15 +18,15 @@ $('.slider').slick({
     {
       breakpoint: 840,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     }
   ]

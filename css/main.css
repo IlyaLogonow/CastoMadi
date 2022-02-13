@@ -402,37 +402,37 @@ ul {
   0% {
     background: url("../img/bg/bg-1.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   20% {
     background: url("../img/bg/bg-2.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   40% {
     background: url("../img/bg/bg-3.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   60% {
     background: url("../img/bg/bg-1.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   80% {
     background: url("../img/bg/bg-2.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   100% {
     background: url("../img/bg/bg-3.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }
@@ -440,37 +440,37 @@ ul {
   0% {
     background: url("../img/bg/bg-1.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   20% {
     background: url("../img/bg/bg-2.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   40% {
     background: url("../img/bg/bg-3.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   60% {
     background: url("../img/bg/bg-1.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   80% {
     background: url("../img/bg/bg-2.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   100% {
     background: url("../img/bg/bg-3.png") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }
@@ -535,6 +535,11 @@ ul {
 .custom-clothing {
   min-height: 897px;
 }
+@media screen and (max-width: 860px) {
+  .custom-clothing {
+    min-height: 650px;
+  }
+}
 .custom-clothing__title {
   font-size: 32px;
   line-height: 42px;
@@ -577,6 +582,12 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 20px;
+}
+@media screen and (max-width: 860px) {
+  .custom-clothing-bg {
+    width: 196px;
+    height: 196px;
+  }
 }
 .custom-clothing-bg__link {
   z-index: 1;
@@ -631,6 +642,11 @@ ul {
   padding-left: 42px;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 860px) {
+  .custom-clothing-text__text {
+    max-width: 170px;
+  }
+}
 .custom-clothing-text__text::before {
   content: url("../svg/icon/jackets-of-any-size.svg");
   display: block;
@@ -654,6 +670,11 @@ ul {
     height: 342px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .babackground-photo-one {
+    height: 242px;
+  }
+}
 
 .order {
   min-height: 360px;
@@ -674,13 +695,26 @@ ul {
 .jackets {
   min-height: 733px;
 }
+@media screen and (max-width: 750px) {
+  .jackets {
+    min-height: 600px;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .jackets {
+    min-height: 500px;
+    margin-top: 50px;
+  }
+}
 .jackets__title {
   margin-bottom: 24px;
 }
 
 .slider__img {
   max-width: 396px;
-  min-height: 396px;
+  width: 100%;
+  min-height: auto;
   margin-bottom: 17px;
 }
 .slider__subtitle {
@@ -701,6 +735,11 @@ ul {
 @media screen and (max-width: 1000px) {
   .babackground-photo-two {
     height: 342px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .babackground-photo-two {
+    height: 242px;
   }
 }
 
@@ -736,9 +775,19 @@ ul {
     height: 342px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .babackground-photo-three {
+    height: 242px;
+  }
+}
 
 .shoppers {
   min-height: 738px;
+}
+@media screen and (max-width: 650px) {
+  .shoppers {
+    min-height: 500px;
+  }
 }
 .shoppers__title {
   margin-top: 111px;

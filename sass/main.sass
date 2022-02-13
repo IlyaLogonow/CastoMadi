@@ -306,9 +306,9 @@ ul
     .main-nav__item:not(:last-child) 
         margin-right: 0px
 
-// //CONTENT//
-// //hero//
-// //hero bg//
+//CONTENT//
+//hero//
+//hero bg//
 .hero
     min-height: 740px
     background: url("../img/bg/bg-1.png")
@@ -328,32 +328,32 @@ ul
         0% 
             background: url("../img/bg/bg-1.png") no-repeat
             background-position: top  
-            background-size: contain
+            background-size: cover
             background-repeat: no-repeat
         20%
             background: url("../img/bg/bg-2.png") no-repeat
             background-position: top  
-            background-size: contain
+            background-size: cover
             background-repeat: no-repeat
         40%
             background: url("../img/bg/bg-3.png") no-repeat
             background-position: top  
-            background-size: contain
+            background-size: cover
             background-repeat: no-repeat 
         60% 
             background: url("../img/bg/bg-1.png") no-repeat
             background-position: top  
-            background-size: contain
+            background-size: cover
             background-repeat: no-repeat
         80% 
             background: url("../img/bg/bg-2.png") no-repeat
             background-position: top  
-            background-size: contain
+            background-size: cover
             background-repeat: no-repeat
         100%
             background: url("../img/bg/bg-3.png") no-repeat
             background-position: top  
-            background-size: contain
+            background-size: cover
             background-repeat: no-repeat
 //hero bg//
 
@@ -408,6 +408,8 @@ ul
 //custom-clothing//
 .custom-clothing 
     min-height: 897px
+    @media screen and ( max-width: 860px )
+        min-height: 650px
     &__title
         font-size: 32px
         line-height: 42px
@@ -433,6 +435,9 @@ ul
     align-items: center
     justify-content: center
     margin-right: 20px
+    @media screen and ( max-width: 860px )
+        width: 196px
+        height: 196px
     &__link
         @extend  %transition
         @extend %custom-clothing-bg-link
@@ -478,6 +483,8 @@ ul
         position: relative
         padding-left: 42px
         margin-bottom: 50px
+        @media screen and ( max-width: 860px )
+            max-width: 170px
     &__text::before
         content: url("../svg/icon/jackets-of-any-size.svg")
         display: block
@@ -498,10 +505,13 @@ ul
     background-repeat: no-repeat
     @media screen and ( max-width: 1000px )
         height: 342px
+    @media screen and ( max-width: 1000px )
+        height: 242px
 
 //order//
 .order
     min-height: 360px
+
     &__title
         @extend %title-info-block
         padding-top: 68px
@@ -524,6 +534,12 @@ ul
 //slider//
 .jackets
     min-height: 733px
+    @media screen and ( max-width: 750px )
+        min-height: 600px
+        margin-top: 50px
+    @media screen and ( max-width: 500px )
+        min-height: 500px
+        margin-top: 50px
     &__title
         @extend %slider-title
         margin-bottom: 24px
@@ -531,8 +547,10 @@ ul
 .slider
     &__img
         max-width: 396px
-        min-height: 396px
+        width: 100%
+        min-height: auto
         margin-bottom: 17px
+
     &__subtitle
         @extend %slider-subtitle
         margin-bottom: 10px
@@ -550,6 +568,8 @@ ul
     background-repeat: no-repeat
     @media screen and ( max-width: 1000px )
         height: 342px
+    @media screen and ( max-width: 1000px )
+        height: 242px
 
 //questions-answers//
 .questions-answers
@@ -585,10 +605,14 @@ ul
     background-repeat: no-repeat
     @media screen and ( max-width: 1000px )
         height: 342px
+    @media screen and ( max-width: 1000px )
+        height: 242px
 
 //shoppers//
 .shoppers 
     min-height: 738px
+    @media screen and ( max-width: 650px )
+        min-height: 500px
     &__title
         margin-top: 111px
         margin-bottom: 24px
